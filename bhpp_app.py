@@ -1,7 +1,7 @@
 
 
 import numpy as np
-from flask import Flask,redirect,url_for,render_template,request,jsonify,json
+from flask import Flask,render_template,request,json
 import pickle
 
 __data_columns = None
