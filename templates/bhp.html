@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
+  <script type="text/javascript" src="{{ url_for('static',filename='bhp.js') }}"></script>
   <h2>BHPP</h2>
 <form action="{{ url_for('predict') }}" method="post">
 <label for="location">Choose a location:</label>
