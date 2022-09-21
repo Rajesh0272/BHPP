@@ -11,7 +11,7 @@ __data_columns = None
 app=Flask(__name__)
 model = pickle.load(open('bhpp.pkl','rb'))
 
-@app.route('/')
+@app.route('/home')
 def home():
     return render_template('bhp.html')
 
