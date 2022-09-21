@@ -16,7 +16,7 @@ def home():
     return render_template('bhp.html')
 
 
-@app.route('/predict',methods=['GET','POST'])
+@app.route('/predict',methods=['POST'])
 def predict():
     if request.method=='POST':
         location=str(request.form['location'])
