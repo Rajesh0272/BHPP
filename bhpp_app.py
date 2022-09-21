@@ -15,31 +15,6 @@ model = pickle.load(open('bhpp.pkl','rb'))
 def home():
     return render_template('bhp.html')
 
-# def load_saved_artifacts():
-    
-#     global  __data_columns
-#     global __locations
-#     with open("C:/Users/M RAJESH/PycharmProjects/Flask_vs/artifacts/columns.json", "r") as f:
-#         __data_columns = json.load(f)['data_columns']
-#         __locations = __data_columns[3:]
-
-# @app.route('/predict',methods=['POST'])
-# def predict(__locations,sqft,bhk,bath):
-#     try:
-#         loc_index = __data_columns.index(__locations.lower())
-#     except:
-#         loc_index = -1
-
-#     x = np.zeros(len(__data_columns))
-#     x[0] = sqft
-#     x[1] = bath
-#     x[2] = bhk
-#     if loc_index>=0:
-#         x[loc_index] = 1
-#         prediction =model.predict([[x]])
-#         output = round(prediction[0]*1000,3)
-#     return render_template('result_bhpp.html',result=output)#,prediction_text='Home price predicted is {}'.format(output))
-
 
 @app.route('/predict',methods=['GET','POST'])
 def predict():
