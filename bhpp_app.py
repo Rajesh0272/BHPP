@@ -41,8 +41,8 @@ def predict():
             x[loc_index] = 1
         prediction =model.predict([x])
         output = round(prediction[0]*1000,3)
-        a=("home price prediction is {}".format(output))
-        return a
+        
+        return render_template('bhp.html',result=output)
     
     
     #     final_features=get_estimated_price(location,sqft,bath,bhk)
