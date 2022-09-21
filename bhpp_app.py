@@ -11,7 +11,7 @@ __data_columns = None
 app=Flask(__name__)
 model = pickle.load(open('bhpp.pkl','rb'))
 
-@app.route('/',methods=['POST','GET'])
+@app.route('/')
 def home():
     return render_template('bhp.html')
 
@@ -41,7 +41,7 @@ def home():
 #     return render_template('result_bhpp.html',result=output)#,prediction_text='Home price predicted is {}'.format(output))
 
 
-@app.route('/predict',methods=['POST','GET'])
+@app.route('/predict',methods=['GET','POST'])
 def predict():
     location=str(request.form['location'])
     sqft=float(request.form['sqft'])
