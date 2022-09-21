@@ -1,1 +1,1 @@
-web: gunicorn app:bhpp_app
+web: gunicorn bhpp_app:app
