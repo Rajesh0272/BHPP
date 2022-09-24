@@ -5,7 +5,7 @@ from flask import Flask,render_template,request,json
 import pickle
 
 
-__data_columns None
+__data_columns=None
 
 
 app=Flask(__name__)
