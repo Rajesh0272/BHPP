@@ -1,7 +1,7 @@
 
 
 import numpy as np
-from flask import Flask,render_template,request,json
+from flask import Flask,render_template,request,json,jsonify
 import pickle
 
 
@@ -16,7 +16,7 @@ def home():
     return render_template('bhp.html')
 
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict',methods=['POST','GET'])
 def predict():
     if request.method=='POST':
         location=str(request.form['location'])
