@@ -9,7 +9,7 @@ __data_columns=None
 
 
 app=Flask(__name__)
-model = pickle.load(open('bhpp.pkl','rb'))
+model = pickle.load(open('banglore_home_prices_model.pkl','rb'))
 
 @app.route('/')
 @cross_origin()
