@@ -12,13 +12,13 @@ app=Flask(__name__)
 model = pickle.load(open('bhpp.pkl','rb'))
 
 @app.route('/')
-@app.cors()
+@cross_origin()
 def home():
     return render_template('bhp.html')
 
 
 @app.route('/predict',methods=['POST','GET'])
-@app.cors()
+@cross_origin()
 def predict():
     if request.method=='POST':
         location=str(request.form['location'])
