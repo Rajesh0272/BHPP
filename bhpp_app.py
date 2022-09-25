@@ -29,7 +29,7 @@ def predict():
         with open("./artifacts/columns.json", "r") as f:
             __data_columns = json.load(f)['data_columns']
 
-        try:
+        try: 
             loc_index = __data_columns.index(location.lower())
         except:
             loc_index = -1
